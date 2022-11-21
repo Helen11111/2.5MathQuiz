@@ -13,10 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:textColor="@color/black"
-        android:textSize="40sp"
         android:text="11 + 23 = 0"
-         />
+        android:textColor="@color/black"
+        android:textSize="50sp" />
 
     <LinearLayout
         android:id="@+id/field"
@@ -25,13 +24,16 @@
         android:layout_below="@+id/problem"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:layout_margin="10dp">
 
         <TextView
             android:id="@+id/text1"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
             android:text="34"
+            android:layout_weight="1"
+            android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:background="@color/still"
@@ -39,9 +41,11 @@
 
         <TextView
             android:id="@+id/text2"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
             android:text="34"
+            android:gravity="center"
+            android:layout_weight="1"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:background="@color/still"
@@ -49,9 +53,11 @@
 
         <TextView
             android:id="@+id/text3"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
             android:text="34"
+            android:layout_weight="1"
+            android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:background="@color/still"
