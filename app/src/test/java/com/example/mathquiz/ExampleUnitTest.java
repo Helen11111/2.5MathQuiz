@@ -17,19 +17,19 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
     }
 
-    @Test
+    /*@Test
     public void test1() {
         int a = mathGenerator.getRandom(10, -10);
         assert (-10 <= a && a <= 10);
 
-    }
+    }*/
 
-    @Test
+    /*@Test
     public void test2() {
         for (int i = 0; i < 10; i++) {
             int a = mathGenerator.getRandom(100, -100);
             int b = mathGenerator.getRandom(100, -100);
             assert a != b;
         }
-    }
+    }*/
 }
