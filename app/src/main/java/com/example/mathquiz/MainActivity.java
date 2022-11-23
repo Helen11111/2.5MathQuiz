@@ -19,10 +19,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupUI();
-        getRandom(1, 5);
-        getRandom(-123, 1235);
-        getRandom(-11, 523);
-        getRandom(1211, 1245);
+        MathGenerator mathGenerator = new MathGenerator();
+        problem.setText(mathGenerator.getProblem());
     }
 
     private void setupUI() {
@@ -30,11 +28,5 @@ public class MainActivity extends Activity {
         text1 = findViewById(R.id.text1);
         text2 = findViewById(R.id.text2);
         text3 = findViewById(R.id.text3);
-    }
-
-    private int getRandom(int max, int min) {
-        int random = (int)(Math.random() * (max - min) + min);
-        Log.d("DEBUGGER_TAG", "max: " + max + " min: " + min + " random: " + random);
-        return random;
     }
 }
