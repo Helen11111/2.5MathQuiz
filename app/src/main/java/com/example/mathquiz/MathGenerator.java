@@ -19,8 +19,10 @@ public class MathGenerator {
     }
 
     public int getRandom(int max, int min) {
-        int random = (int)(Math.random() * (max - min) + min);
-        //Log.d("DEBUGGER_TAG", "max: " + max + " min: " + min + " random: " + random);
+        int random = 0;
+        while (random == 0) {
+            random = (int)(Math.random() * (max - min) + min);
+        }
         return random;
     }
 }

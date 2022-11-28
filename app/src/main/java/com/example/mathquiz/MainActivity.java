@@ -5,9 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     TextView problem;
     TextView text1;
@@ -51,4 +52,8 @@ public class MainActivity extends Activity {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
