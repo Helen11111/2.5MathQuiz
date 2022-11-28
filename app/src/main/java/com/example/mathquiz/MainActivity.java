@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends Activity{
 
     TextView problem;
     TextView text1;
@@ -27,10 +27,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void setupUI() {
+        MyClicker myClicker = new MyClicker();
         problem = findViewById(R.id.problem);
         text1 = findViewById(R.id.text1);
+        text1.setOnClickListener(myClicker);
         text2 = findViewById(R.id.text2);
+        text2.setOnClickListener(myClicker);
         text3 = findViewById(R.id.text3);
+        text3.setOnClickListener(myClicker);
     }
 
     private void generateAnswers() {
@@ -52,8 +56,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    @Override
-    public void onClick(View v) {
+    class MyClicker implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            TextView textView = (TextView) v;
+            String text = textView.getText().toString();
+            if (text.equals(mathGenerator.getResult()))
+                v.setBackgroundColor(getColor(R.color.green));
+            else
+                v.setBackgroundColor(getColor(R.color.red));
 
+        }
     }
+
 }
