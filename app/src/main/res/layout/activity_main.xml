@@ -63,9 +63,19 @@
             android:background="@color/still"
             android:layout_margin="10dp"/>
 
-
-
     </LinearLayout>
 
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="@string/txt_button"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:onClick="reset"/>
 
 </RelativeLayout>

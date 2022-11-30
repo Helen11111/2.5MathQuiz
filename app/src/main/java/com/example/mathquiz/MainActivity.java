@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity{
 
@@ -56,15 +57,27 @@ public class MainActivity extends Activity{
         }
     }
 
+    public void reset(View view) {
+        problem.setText(mathGenerator.getProblem());
+        generateAnswers();
+        text1.setBackgroundColor(getColor(R.color.still));
+        text2.setBackgroundColor(getColor(R.color.still));
+        text3.setBackgroundColor(getColor(R.color.still));
+    }
+
     class MyClicker implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             TextView textView = (TextView) v;
             String text = textView.getText().toString();
-            if (text.equals(mathGenerator.getResult()))
+            if (text.equals(mathGenerator.getResult())) {
                 v.setBackgroundColor(getColor(R.color.green));
-            else
+                Toast.makeText(v.getContext(),"Правильно!", Toast.LENGTH_SHORT).show();
+            }
+            else {
                 v.setBackgroundColor(getColor(R.color.red));
+                Toast.makeText(v.getContext(),"Неправильно!", Toast.LENGTH_SHORT).show();
+            }
 
         }
     }
